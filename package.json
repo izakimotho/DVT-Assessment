@@ -2,11 +2,12 @@
   "name": "dvt-angular-assessment",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "ng": "ng",   
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "ng build"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +27,10 @@
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.4.36",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@angular/cli": "~14.2.2",
+    "@angular/compiler-cli": "^14.2.0",
+    "typescript": "~4.7.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.2",
@@ -40,5 +44,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
+  },
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
   }
 }
